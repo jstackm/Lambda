@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Lambda.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class LambdaBasicsViewModel : BindableBase
     {
         private string _title = "Prism Application";
         public string Title
@@ -16,9 +16,8 @@ namespace Lambda.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public MainWindowViewModel()
+        public LambdaBasicsViewModel()
         {
-
             NoLambdaButton = new DelegateCommand(NoLambdaButtonExe);
             NoLambdaWithLengthButton = new DelegateCommand(NoLambdaWithLengthButtonExe);
             DelegateButton1 = new DelegateCommand(DelegateButton1Exe);
@@ -33,7 +32,6 @@ namespace Lambda.ViewModels
             ActionWithoutParameterButton = new DelegateCommand(ActionWithoutParameterButtonExe);
             LambdaCollectionButton = new DelegateCommand(LambdaCollectionButtonExe);
             LambdaCustomClassButton = new DelegateCommand(LambdaCustomClassButtonExe);
-
         }
 
         //=======================================================================

@@ -1,4 +1,5 @@
-﻿using Lambda.Views;
+﻿using Lambda.ViewModels;
+using Lambda.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
@@ -12,12 +13,13 @@ namespace Lambda
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<Main>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<LambdaBasics>();
+            containerRegistry.RegisterForNavigation<LinqAdvanced>();
         }
     }
 }
