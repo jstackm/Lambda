@@ -8,15 +8,15 @@ namespace Lambda.Domain
 {
     public sealed class Product
     {
-        public Product(int productId, string productName, int price )
+        public Product(int productId, string productName, int price)
         {
             ProductId = productId;
             ProductName = productName;
             Price = price;
         }
-        public int ProductId { get;  }
-        public string ProductName { get;  }
-        public int Price { get;  }
+        public int ProductId { get; }
+        public string ProductName { get; }
+        public int Price { get; }
     }
 
 
@@ -27,15 +27,15 @@ namespace Lambda.Domain
             ProductId = productId;
             ProductName = productName;
         }
-        
+
         public ProductDto(Product product)
         {
             ProductId = product.ProductId.ToString();
             ProductName = product.ProductName;
         }
 
-        public string ProductId { get;  }
-        public string ProductName { get;  }
+        public string ProductId { get; }
+        public string ProductName { get; }
 
         public override string ToString()
         {
@@ -53,6 +53,37 @@ namespace Lambda.Domain
         {
             return $"entity productId={ProductId} productName={ProductName}";
         }
+    }
+
+    public sealed class Sale
+    {
+        public Sale(int saleId, int number, int customerId, DateTime saleDateTime)
+        {
+            SaleId = saleId;
+            Number = number;
+            CustomerId = customerId;
+            SaleDateTime = saleDateTime;
+        }
+
+        public int SaleId { get; }
+        public int Number { get; }
+        public int CustomerId { get; }
+        public DateTime SaleDateTime { get; }
+    }
+
+    public sealed class SaleItem
+    {
+        public SaleItem(int saleId, int number, int productId, int saleCount)
+        {
+            SaleId = saleId;
+            Number = number;
+            ProductId = productId;
+            SaleCount = saleCount;
+        }
+        public int SaleId { get; }
+        public int Number { get; }
+        public int ProductId { get; }
+        public int SaleCount { get; }
     }
 
 }

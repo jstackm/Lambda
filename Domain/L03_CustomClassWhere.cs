@@ -144,6 +144,16 @@ namespace Lambda.Domain
             Debug.WriteLine("");
 
 
+            // let 句の使い方
+            var result11 = from p in _products
+                           let wk = p.ProductName.ToLower()     // 処理を退避して（別の変数に入れて） 置くと可読性が上がる
+                           where wk[0] == 'p'                   // 大文字小文字区別しない
+                           select p;
+            foreach (var val in result11)
+            {
+                Debug.WriteLine($"result11 id={val.ProductId} \t name={val.ProductName} \t price={val.Price}");
+            }
+            Debug.WriteLine("");
 
         }
 

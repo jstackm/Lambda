@@ -19,11 +19,11 @@
                         HorizontalContentAlignment="left"
                         Margin="10,10,10,5"
                         Command="{Binding QueryIntWhere}"/>
-                <Button Content="test"
+                <Button Content="int Where"
                         Width="180"
                         HorizontalContentAlignment="left"
                         Margin="10,10,10,5"
-                        Command="{Binding NoLambdaButton}"/>
+                        Command="{Binding LambdaIntWhere}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Content="string Where"
@@ -38,6 +38,41 @@
                         HorizontalContentAlignment="left"
                         Margin="10,10,10,5"
                         Command="{Binding QueryCustomClassWhere}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Groupby"
+                        Width="180"
+                        HorizontalContentAlignment="left"
+                        Margin="10,10,10,5"
+                        Command="{Binding QueryGroupBy}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Groupby Multi-Condition"
+                        Width="180"
+                        HorizontalContentAlignment="left"
+                        Margin="10,10,10,5"
+                        Command="{Binding QueryGroupByMulti}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="InnerJoin"
+                        Width="180"
+                        HorizontalContentAlignment="left"
+                        Margin="10,10,10,5"
+                        Command="{Binding QueryInnerJoin}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="InnerJoin Multi-Condition"
+                        Width="180"
+                        HorizontalContentAlignment="left"
+                        Margin="10,10,10,5"
+                        Command="{Binding QueryInnerJoinMulti}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="LeftJoin"
+                        Width="180"
+                        HorizontalContentAlignment="left"
+                        Margin="10,10,10,5"
+                        Command="{Binding QueryLeftJoin}"/>
             </StackPanel>
         </StackPanel>
     </Grid>

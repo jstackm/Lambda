@@ -59,6 +59,8 @@
     <Compile Include="Domain\L02_StringWhere.cs" />
     <Compile Include="Domain\L01_IntWhere.cs" />
     <Compile Include="Domain\L03_CustomClassWhere.cs" />
+    <Compile Include="Domain\L04_GroupBy.cs" />
+    <Compile Include="Domain\L05_Join.cs" />
     <Compile Include="Domain\Objects.cs" />
     <Compile Include="ViewModels\LinqAdvancedViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
